@@ -1,0 +1,38 @@
+# ---- 依赖 ----
+node_modules/
+.pnpm-store/
+
+# ---- 构建产物 ----
+android/build/
+android/app/build/
+android/.gradle/
+android/capacitor-cordova-android-plugins/
+android/local.properties
+dist/
+*.apk
+*.aab
+
+# ---- 签名文件：绝对不要上传 ----
+*.keystore
+*.jks
+keystore.properties
+android/keystore.properties
+
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+debug.log
+
+# ---- 原始数据（体积大，且含他人对局） ----
+research/raw/
+data/reports/
+*.json.gz
+
+# ---- macOS App 构建缓存（236 MB）----
+mac/.swiftcache/
+mac/.build/
+mac/build/
+*.app/

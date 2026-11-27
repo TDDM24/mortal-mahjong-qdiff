@@ -1,0 +1,565 @@
+{
+ "report_id": "0b0d6c2336b144eb",
+ "rank": 3,
+ "score": 26900,
+ "rating": 83.8262,
+ "target": 2,
+ "lobby": "上级",
+ "n_decisions": 184,
+ "five": [
+  {
+   "name": "合计失分",
+   "value": 9.9885,
+   "note": ""
+  },
+  {
+   "name": "每100次牌效决策",
+   "value": 12.0728,
+   "note": "95 次"
+  },
+  {
+   "name": "每100次防守决策",
+   "value": 17.1476,
+   "note": "33 次"
+  },
+  {
+   "name": "压力分数",
+   "value": 17.615,
+   "note": "51 次"
+  },
+  {
+   "name": "严重失误",
+   "value": 1.6304,
+   "note": "3 次"
+  }
+ ],
+ "summary": {
+  "n": 184,
+  "牌效": 6.2333,
+  "牌效_n": 95,
+  "牌效_raw": 11.4692,
+  "防守": 3.0754,
+  "防守_n": 33,
+  "防守_raw": 5.6587,
+  "副露压力下": 0,
+  "副露压力下_n": 0,
+  "副露压力下_raw": 0,
+  "立直判断": 0.677,
+  "立直判断_n": 19,
+  "立直判断_raw": 1.2457,
+  "鸣牌判断": 0.0028,
+  "鸣牌判断_n": 35,
+  "鸣牌判断_raw": 0.0052,
+  "未知": 0,
+  "未知_n": 0,
+  "未知_raw": 0,
+  "和了": 0,
+  "和了_n": 2,
+  "和了_raw": 0,
+  "loss": 9.9885,
+  "severe": 1.6304
+ },
+ "log_stats": {
+  "kyoku": 12,
+  "win": 2,
+  "deal": 2,
+  "riichi": 4,
+  "meld": 1,
+  "meld_kyo": 1,
+  "win_rate": 16.6667,
+  "deal_rate": 16.6667,
+  "riichi_rate": 33.3333,
+  "meld_rate": 8.3333,
+  "avg_win": 8500,
+  "avg_deal": 5300
+ },
+ "pressure": {
+  "none": {
+   "n": 92,
+   "loss": 8.4529,
+   "sq": 6.0374,
+   "per100": 9.1879,
+   "deal": 0,
+   "m_deal": 0
+  },
+  "hidden": {
+   "n": 17,
+   "loss": 3.0163,
+   "sq": 2.5458,
+   "per100": 17.7431,
+   "deal": 1,
+   "m_deal": 1
+  },
+  "riichi": {
+   "n": 34,
+   "loss": 5.9673,
+   "sq": 4.1036,
+   "per100": 17.551,
+   "deal": 1,
+   "m_deal": 1
+  },
+  "merged": {
+   "n": 51,
+   "loss": 8.9836,
+   "sq": 6.6494,
+   "per100": 17.615
+  }
+ },
+ "rows_by_cat": {
+  "牌效": 95,
+  "防守": 33,
+  "立直判断": 19,
+  "鸣牌判断": 35,
+  "和了": 2
+ },
+ "top10": [
+  {
+   "kyoku": "南4",
+   "junme": 13,
+   "cat": "防守",
+   "diff": 1.1059,
+   "tehai": [
+    "2m",
+    "3m",
+    "3m",
+    "7m",
+    "3p",
+    "4p",
+    "4p",
+    "6p",
+    "6p",
+    "7p",
+    "2s",
+    "2s",
+    "4s",
+    "7s"
+   ],
+   "shanten": 2,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "2m",
+    "tsumogiri": false
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "7p",
+    "tsumogiri": false
+   },
+   "q_actual": -1.3432,
+   "q_expected": -0.2372
+  },
+  {
+   "kyoku": "东4",
+   "junme": 9,
+   "cat": "牌效",
+   "diff": 1.053,
+   "tehai": [
+    "1m",
+    "1m",
+    "2m",
+    "4m",
+    "5m",
+    "6m",
+    "8m",
+    "9m",
+    "4p",
+    "5p",
+    "6p",
+    "5s",
+    "6s",
+    "9m"
+   ],
+   "shanten": 1,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "9m",
+    "tsumogiri": true
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "2m",
+    "tsumogiri": false
+   },
+   "q_actual": -1.049,
+   "q_expected": 0.004
+  },
+  {
+   "kyoku": "东3",
+   "junme": 5,
+   "cat": "牌效",
+   "diff": 1.0311,
+   "tehai": [
+    "3m",
+    "4m",
+    "5m",
+    "5m",
+    "6m",
+    "7m",
+    "6p",
+    "8p",
+    "3s",
+    "5s",
+    "8s",
+    "8s",
+    "8s",
+    "2m"
+   ],
+   "shanten": 1,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "2m",
+    "tsumogiri": true
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "8p",
+    "tsumogiri": false
+   },
+   "q_actual": -0.8808,
+   "q_expected": 0.1503
+  },
+  {
+   "kyoku": "东4",
+   "junme": 6,
+   "cat": "牌效",
+   "diff": 0.9982,
+   "tehai": [
+    "1m",
+    "1m",
+    "2m",
+    "4m",
+    "5m",
+    "6m",
+    "8m",
+    "9m",
+    "4p",
+    "5p",
+    "6p",
+    "5s",
+    "6s",
+    "2m"
+   ],
+   "shanten": 1,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "2m",
+    "tsumogiri": true
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "9m",
+    "tsumogiri": false
+   },
+   "q_actual": -1.0239,
+   "q_expected": -0.0257
+  },
+  {
+   "kyoku": "南3 2本",
+   "junme": 6,
+   "cat": "牌效",
+   "diff": 0.9453,
+   "tehai": [
+    "5m",
+    "5m",
+    "6m",
+    "6m",
+    "2p",
+    "4p",
+    "9p",
+    "9p",
+    "2s",
+    "2s",
+    "3s",
+    "6s",
+    "7s",
+    "8p"
+   ],
+   "shanten": 2,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "2p",
+    "tsumogiri": false
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "8p",
+    "tsumogiri": true
+   },
+   "q_actual": -1.0271,
+   "q_expected": -0.0818
+  },
+  {
+   "kyoku": "东3 1本",
+   "junme": 10,
+   "cat": "立直判断",
+   "diff": 0.9371,
+   "tehai": [
+    "1m",
+    "1m",
+    "2m",
+    "2m",
+    "3m",
+    "1p",
+    "1p",
+    "1p",
+    "8p",
+    "8p",
+    "8p",
+    "5sr",
+    "5s",
+    "9m"
+   ],
+   "shanten": 0,
+   "actual": {
+    "type": "reach",
+    "actor": 2
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "9m",
+    "tsumogiri": true
+   },
+   "q_actual": -1.0075,
+   "q_expected": -0.0704
+  },
+  {
+   "kyoku": "南4 2本",
+   "junme": 8,
+   "cat": "牌效",
+   "diff": 0.9217,
+   "tehai": [
+    "1m",
+    "2m",
+    "2m",
+    "3m",
+    "3m",
+    "4p",
+    "5pr",
+    "3s",
+    "4s",
+    "5sr",
+    "5s",
+    "8s",
+    "9s",
+    "3p"
+   ],
+   "shanten": 1,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "5s",
+    "tsumogiri": false
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "8s",
+    "tsumogiri": false
+   },
+   "q_actual": -0.6114,
+   "q_expected": 0.3103
+  },
+  {
+   "kyoku": "东1",
+   "junme": 7,
+   "cat": "防守",
+   "diff": 0.8843,
+   "tehai": [
+    "4m",
+    "4m",
+    "5m",
+    "1p",
+    "1p",
+    "1p",
+    "2p",
+    "3p",
+    "1s",
+    "1s",
+    "3s",
+    "5sr",
+    "6s",
+    "4p"
+   ],
+   "shanten": 1,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "4m",
+    "tsumogiri": false
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "1p",
+    "tsumogiri": false
+   },
+   "q_actual": -1.1402,
+   "q_expected": -0.2559
+  },
+  {
+   "kyoku": "南2",
+   "junme": 14,
+   "cat": "防守",
+   "diff": 0.7766,
+   "tehai": [
+    "4m",
+    "1p",
+    "1p",
+    "4p",
+    "4p",
+    "7p",
+    "8p",
+    "9p",
+    "9p",
+    "3s",
+    "4s",
+    "5sr",
+    "5s",
+    "4s"
+   ],
+   "shanten": 1,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "9p",
+    "tsumogiri": false
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "7p",
+    "tsumogiri": false
+   },
+   "q_actual": -0.9994,
+   "q_expected": -0.2228
+  },
+  {
+   "kyoku": "南4 1本",
+   "junme": 4,
+   "cat": "牌效",
+   "diff": 0.7677,
+   "tehai": [
+    "5m",
+    "5m",
+    "6m",
+    "6m",
+    "7m",
+    "8m",
+    "6p",
+    "7p",
+    "7p",
+    "P",
+    "P",
+    "F",
+    "F",
+    "F"
+   ],
+   "shanten": 1,
+   "actual": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "6p",
+    "tsumogiri": false
+   },
+   "expected": {
+    "type": "dahai",
+    "actor": 2,
+    "pai": "7p",
+    "tsumogiri": false
+   },
+   "q_actual": -0.5689,
+   "q_expected": 0.1988
+  }
+ ],
+ "audit": {
+  "games": 1,
+  "n": 184,
+  "ne": 95,
+  "le": 11.4692,
+  "cats": [
+   {
+    "k": "进张算少",
+    "n": 4,
+    "loss": 3.0337,
+    "share_eff": 26.4504,
+    "per100": 1.6487,
+    "big": 1,
+    "mid": 4
+   },
+   {
+    "k": "改良没看见",
+    "n": 4,
+    "loss": 2.0423,
+    "share_eff": 17.807,
+    "per100": 1.11,
+    "big": 0,
+    "mid": 2
+   },
+   {
+    "k": "Mortal 宁可少进张",
+    "n": 2,
+    "loss": 1.9528,
+    "share_eff": 17.0264,
+    "per100": 1.0613,
+    "big": 1,
+    "mid": 2
+   },
+   {
+    "k": "该进没进",
+    "n": 1,
+    "loss": 0.2394,
+    "share_eff": 2.0873,
+    "per100": 0.1301,
+    "big": 0,
+    "mid": 0
+   },
+   {
+    "k": "该退没退",
+    "n": 0,
+    "loss": 0,
+    "share_eff": 0,
+    "per100": 0,
+    "big": 0,
+    "mid": 0
+   },
+   {
+    "k": "其他",
+    "n": 6,
+    "loss": 3.9589,
+    "share_eff": 34.5176,
+    "per100": 2.1516,
+    "big": 0,
+    "mid": 4
+   }
+  ],
+  "bysh": {
+   "1": {
+    "Mortal 宁可少进张": 1.9528,
+    "改良没看见": 0.8763,
+    "其他": 1.3401,
+    "进张算少": 1.8207
+   },
+   "2": {
+    "进张算少": 1.213,
+    "其他": 0.9453,
+    "该进没进": 0.2394
+   },
+   "3": {
+    "其他": 1.6735,
+    "改良没看见": 1.166
+   }
+  }
+ },
+ "audit_hands_count": 17
+}

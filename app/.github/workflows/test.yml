@@ -1,0 +1,36 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  golden:
+    name: 金标准与单元测试
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 计算核心金标准（426 字段）
+        run: node test/test_golden.js
+      - name: 列表筛选 / 分块 / 备份压缩
+        run: |
+          node test/test_filter.js
+          node test/test_chunk.js
+          node test/test_backup.js
+
+  analysis:
+    name: 论文数字可复现
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 安装依赖
+        run: pip install --quiet pandas numpy
+      - name: 复现分析（应输出 62 场、严重失误 r≈-0.48）
+        run: python3 research/analysis.py

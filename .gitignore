@@ -1,0 +1,34 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 安卓 / Gradle 产物
+app/android/build/
+app/android/.gradle/
+app/android/app/build/
+app/android/capacitor-cordova-android-plugins/
+app/android/local.properties
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+desktop/dist/
+desktop/build/
+*.spec
+
+# 签名与密钥（绝不入库）
+*.keystore
+*.jks
+keystore.properties
+
+# 桌面版打包产物
+*.app/
+*.exe
+*.dmg
+
+# 系统与编辑器
+.DS_Store
+.idea/
+.vscode/
+*.swp

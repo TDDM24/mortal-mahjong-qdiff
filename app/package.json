@@ -1,0 +1,25 @@
+{
+  "name": "mahjong-record",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "麻将记录 · 计算核心 + 手机界面 + Capacitor 安卓壳",
+  "scripts": {
+    "test": "node test/test_golden.js web/data/report_0b0d6c2336b144eb.json",
+    "serve": "python3 -m http.server 8765 --bind 127.0.0.1",
+    "cap:add": "cap add android",
+    "cap:sync": "cap sync android",
+    "cap:open": "cap open android",
+    "cap:doctor": "cap doctor",
+    "android": "cd android && ./gradlew assembleDebug",
+    "android:release": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.3",
+    "@capacitor/core": "^8.6.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.6.3"
+  }
+}

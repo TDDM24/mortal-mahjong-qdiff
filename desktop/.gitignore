@@ -1,0 +1,39 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 打包产物 ----
+build/
+build-onefile/
+build_icon/
+dist/
+dist-onefile/
+*.spec
+
+# ---- 运行数据（不要提交）----
+麻将记录.db
+麻将记录.db-wal
+麻将记录.db-shm
+麻将逐场数据.xlsx
+settings.json
+导出/
+牌谱数据/
+reports/
+webview/
+ui_icons/
+logs/
+程序/
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+*.swp
