@@ -236,51 +236,51 @@ Mortal 报告 JSON 的关键字段：
 
 见附录 A。关键定义：
 
-$$
-L=\frac{100}{N}\sum_{i=1}^{N}\left(q_i^{\text{expected}}-q_i^{\text{actual}}\right)
-$$
+```text
+L = (100 / N) · Σ(i=1..N) [ q_i(期望) − q_i(实际) ]
+```
 
-$$
-S=\frac{100}{N}\cdot\#\{i:\ q_i^{\text{expected}}-q_i^{\text{actual}}\geq 1.0\}
-$$
+```text
+S = (100 / N) × #{ i : q_i(期望) − q_i(实际) ≥ 1.0 }
+```
 
 ### 6.3 统计方法
 
 **信度（分半）**：奇数场 vs 偶数场，Pearson–Brown 校正 [6][7]
 
-$$
-\rho_k=\frac{k\rho}{1+(k-1)\rho}
-$$
+```text
+ρ_k = k·ρ / (1 + (k−1)·ρ)          ← Spearman–Brown 折算
+```
 
-单被试实测：$r_{20}=0.89$（合计失分）。算法：按日期排序后奇偶配对，相邻两场 $r=0.28$，再由上式折算；`analysis.py` 的 2c 段可复现（严重失误 0.82、每100次牌效 0.83、每100次防守 0.82）。样本少，这个数是量级估计，不是精确值。
+单被试实测：折算到 20 场的信度 ρ₂₀ = 0.89（合计失分）。算法：按日期排序后奇偶配对，相邻两场 r = 0.28，再由上式折算；`analysis.py` 的 2c 段可复现（严重失误 0.82、每100次牌效 0.83、每100次防守 0.82）。样本少，这个数是量级估计，不是精确值。
 
 **相关与区间**：Pearson 相关；Fisher z 变换构造 CI [8]
 
-$$
-z=\operatorname{artanh}(\rho),\quad SE=\frac{1}{\sqrt{n-3}},\quad CI=\tanh\left(z\pm 1.96\,SE\right)
-$$
+```text
+z = artanh(ρ)      SE = 1 / √(n − 3)      CI = tanh( z ± 1.96·SE )
+```
 
 **衰减校正**（测量误差使相关变小）[9][10]
 
-$$
-\rho_{\text{obs}}=\rho_{\text{true}}\sqrt{\text{rel}_x\cdot\text{rel}_y}
-$$
+```text
+ρ_观测 = ρ_真值 × √( rel_x × rel_y )     ← 测量误差衰减（attenuation）
+```
 
 **回归**：OLS，按「天」聚类的稳健标准误 [11]
 
-$$
-\hat V=(X'X)^{-1}\left(\sum_{g}X_g'\hat u_g\hat u_g'X_g\right)(X'X)^{-1}\cdot\frac{G}{G-1}\cdot\frac{n-1}{n-k}
-$$
+```text
+V̂ = (X'X)⁻¹ · [ Σ_g X_g' û_g û_g' X_g ] · (X'X)⁻¹ · G/(G−1) · (n−1)/(n−k)
+```
 
 **中介**：和了数与放铳数作为中介变量，比较直接效应与总效应 [12]
 
 **功效**（相关检验）
 
-$$
-n=\left(\frac{z_{1-\alpha/2}+z_{1-\beta}}{z_{\rho}}\right)^{2}+3
-$$
+```text
+n = [ (z_{1−α/2} + z_{1−β}) / z_ρ ]² + 3      ← 相关系数的样本量（Fisher z）
+```
 
-$\rho=0.4,\alpha=0.05,\text{power}=0.8\Rightarrow n\approx 47$；考虑衰减（≈0.87 倍）后目标 60 人。
+ρ = 0.4、α = 0.05、功效 0.8 ⇒ n ≈ 47；考虑衰减（≈0.87 倍）后目标 60 人。
 
 **多重比较**：Benjamini–Hochberg FDR [13]；或 Bonferroni（8 项 → 阈值 0.006）。
 
@@ -473,14 +473,14 @@ Spearman(严重失误, 顺位)=+0.37。三个因变量高度共线（得点本�
 
 ## 附录 A 指标计算口径
 
-设第 $i$ 手 Mortal 给出 $q_i^{\text{expected}}$（推荐）与 $q_i^{\text{actual}}$（实际），差值 $d_i=q^{\text{e}}-q^{\text{a}}$。
+设第 i 手 Mortal 给出 q_i(期望)（推荐动作）与 q_i(实际)（实际动作），差值 d_i = q_i(期望) − q_i(实际)。
 
 | 指标 | 公式 | 说明 |
 |---|---|---|
-| 合计失分 | $\frac{100}{N}\sum d_i$ | $N$ = 全部决策数 |
-| 严重失误 | $\frac{100}{N}\#\{i:d_i\ge 1.0\}$ | 阈值 1.0 由报告 `details` 尺度确定 |
-| 类别失分 | $\frac{100}{N_c}\sum_{i\in c}d_i$ | $N_c$ = 该类别决策数 |
-| 压力分数 | $\frac{100}{N_{\text{riichi}}+N_{\text{hidden}}}\sum_{i\in\text{riichi}\cup\text{hidden}}d_i$ | 分母是「处于威胁下」的切牌次数（两类相加），**不是全部切牌数** |
+| 合计失分 | (100 / N) · Σ d_i | N = 全部决策数 |
+| 严重失误 | (100 / N) · #{ d_i ≥ 1.0 } | 阈值 1.0 由报告 `details` 尺度确定 |
+| 类别失分 | (100 / N_c) · Σ d_i（只累加类别 c 的手） | N_c = 该类别决策数 |
+| 压力分数 | (100 / (N_立直 + N_隐形)) · Σ d_i（只累加处于威胁下的手） | 分母是「处于威胁下」的切牌次数（两类相加），**不是全部切牌数** |
 | rating | Mortal 内置 | **不作证据变量** |
 
 **分类判定顺序**（不可交换）：立直判断 → 鸣牌判断 → 防守 → 副露压力下 → 牌效。
